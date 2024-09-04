@@ -1,19 +1,35 @@
+<div class="container">
 <h1>Register Form</h1>
     <%= form_with(model: @user, local: true, url: register_path) do |f| %>
+      <div class="form-group">
       <%= f.label :first_name %>
       <%= f.text_field :first_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
       <%= f.label :last_name %>
       <%= f.text_field :last_name, class: 'form-control' %>
+      </div>
+      <div class="form-group">
       <%= f.label :birthday %>
       <%= f.date_field :birthday, class: 'form-control' %>
+      </div>
+      <div class="form-group">
       <%= f.label :gender %>
       <%= f.radio_button :gender, 'Male' %> Male
       <%= f.radio_button :gender, 'Female' %> Female
+      </div>
+      <div class="form-group">
       <%= f.label :email %>
       <%= f.email_field :email, class: 'form-control' %>
+      </div>
+      <div class="form-group">
       <%= f.label :phone_number %>
       <%= f.telephone_field :phone_number, class: 'form-control' %>
+      </div>
+      <div class="form-group">
       <%= f.label :subject %>
       <%= f.select :subject, options_for_select(['Choose option', 'Option 1', 'Option 2', 'Option 3']), {}, class: 'form-control' %>
+      </div>
       <%= f.submit 'Submit', class: 'btn btn-primary' %>
     <% end %>
+</div>
