@@ -2,5 +2,18 @@
     <%= form_with(model: @user, local: true, url: register_path) do |f| %>
       <%= f.label :first_name %>
       <%= f.text_field :first_name, class: 'form-control' %>
-    </div>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class: 'form-control' %>
+      <%= f.label :birthday %>
+      <%= f.date_field :birthday, class: 'form-control' %>
+      <%= f.label :gender %>
+      <%= f.radio_button :gender, 'Male' %> Male
+      <%= f.radio_button :gender, 'Female' %> Female
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :phone_number %>
+      <%= f.telephone_field :phone_number, class: 'form-control' %>
+      <%= f.label :subject %>
+      <%= f.select :subject, options_for_select(['Choose option', 'Option 1', 'Option 2', 'Option 3']), {}, class: 'form-control' %>
+      <%= f.submit 'Submit', class: 'btn btn-primary' %>
     <% end %>
