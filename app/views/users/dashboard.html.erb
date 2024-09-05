@@ -1,2 +1,12 @@
-<h1>Users#create</h1>
-<p>Find me in app/views/users/create.html.erb</p>
+<% @user.each do |user|  %>
+<div class="container">
+  <h1>Registration list</h1>
+  <p><strong>First Name:</strong> <%= user.first_name %></p>
+  <p><strong>Last Name:</strong> <%= user.last_name %></p>
+  <p><strong>Birthday:</strong> <%= user.birthday %></p>
+  <p><strong>Gender:</strong> <%= user.gender %></p>
+  <p><strong>Email:</strong> <%= user.email %></p>
+  <p><strong>Phone Number:</strong> <%= user.phone_number %></p>
+  <p><strong>Subject:</strong> <%= user.subject %></p>
+</div>
+<%end%>

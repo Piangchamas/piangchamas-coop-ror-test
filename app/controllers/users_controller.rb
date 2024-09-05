@@ -16,5 +16,6 @@ class UsersController < ApplicationController
   end
 
   def dashboard
+    @user = User.all
   end
 end
