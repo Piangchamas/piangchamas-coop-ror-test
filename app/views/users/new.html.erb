@@ -4,17 +4,17 @@
     <div class="form-row">
       <div class="form-group">
         <%= f.label :first_name %>
-        <%= f.text_field :first_name, class: 'form-control' %>
+        <%= f.text_field :first_name, class: 'form-control', required: true %>
       </div>
       <div class="form-group">
         <%= f.label :last_name %>
-        <%= f.text_field :last_name, class: 'form-control' %>
+        <%= f.text_field :last_name, class: 'form-control', required: true %>
       </div>
     </div>
     <div class="form-row">
       <div class="form-group">
         <%= f.label :birthday %>
-        <%= f.date_field :birthday, class: 'form-control' %>
+        <%= f.date_field :birthday, class: 'form-control', required: true %>
       </div>
       <div class="form-group">
         <%= f.label :gender %>
@@ -27,16 +27,16 @@
     <div class="form-row">
       <div class="form-group">
         <%= f.label :email %>
-        <%= f.email_field :email, class: 'form-control' %>
+        <%= f.email_field :email, class: 'form-control', required: true %>
       </div>
       <div class="form-group">
         <%= f.label :phone_number %>
-        <%= f.telephone_field :phone_number, class: 'form-control' %>
+        <%= f.telephone_field :phone_number, class: 'form-control', required: true %>
       </div>
     </div>
       <div class="form-group">
         <%= f.label :subject %>
-        <%= f.select :subject, options_for_select(['Choose option', 'Option 1', 'Option 2', 'Option 3']), {}, class: 'form-control' %>
+        <%= f.select :subject, options_for_select(['Choose option', 'Option 1', 'Option 2', 'Option 3']), {}, class: 'form-control', required: true %>
       </div>
       <div class="button">
         <%= f.submit 'Submit', class: 'button-submit' %>
