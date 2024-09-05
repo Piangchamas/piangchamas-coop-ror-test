@@ -38,6 +38,7 @@
         <%= f.label :subject %>
         <%= f.select :subject, options_for_select(['Choose option', 'Option 1', 'Option 2', 'Option 3']), {}, class: 'form-control' %>
       </div>
-        <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      <div class="button">
+        <%= f.submit 'Submit', class: 'button-submit' %>
     <% end %>
 </div>
